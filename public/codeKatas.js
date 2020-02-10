@@ -13,3 +13,11 @@ Test.describe('Fixed tests', _ => {
     Test.assertEquals(litres(0), 0, 'should return 0 litres')
   })
 })
+
+function getRealFloor(n) {
+  return n > 13 ? n - 2 : n > 0 ? n - 1 : n
+}
+
+Test.assertEquals(getRealFloor(1), 0)
+Test.assertEquals(getRealFloor(5), 4)
+Test.assertEquals(getRealFloor(15), 13)
