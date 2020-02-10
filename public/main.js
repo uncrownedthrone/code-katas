@@ -1,6 +1,8 @@
+const qs = e => document.querySelector(e)
+
 const main = () => {
-  if (document.querySelector('h1.hello-world')) {
-    document.querySelector('h1.hello-world').textContent = 'Hello, World!'
+  if (qs('h1.hello-world')) {
+    qs('h1.hello-world').textContent = 'Hello, World!'
   }
 }
 
