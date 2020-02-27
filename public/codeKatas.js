@@ -29,3 +29,21 @@ function noBoringZeros(n) {
   }
   return Number(result)
 }
+
+// growth of a population
+
+const nbYear = (startPop, growthRate, influx, targetPop) => {
+  const realGrowthRate = growthRate / 100
+
+  let currentYear = 0
+  let currentPop = startPop
+
+  while (currentPop < targetPop) {
+    const realGrowthThisYear = currentPop * realGrowthRate + influx
+    const growthThisYear = Math.floor(realGrowthThisYear)
+
+    currentYear += 1
+    currentPop += growthThisYear
+  }
+  return currentYear
+}
